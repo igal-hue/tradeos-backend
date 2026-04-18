@@ -3,6 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const alertsRouter = require('./routes/alerts');
+const authRouter = require('./routes/auth');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/alerts', alertsRouter);
+app.use('/api/auth', authRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
