@@ -8,7 +8,7 @@ const watchlistRouter= require('./routes/watchlist');
 const positionsRouter= require('./routes/positions');
 const tradesRouter   = require('./routes/trades');
 const settingsRouter = require('./routes/settings');
-
+const marketRouter  = require('./routes/market');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -25,7 +25,7 @@ app.use('/api/watchlist', watchlistRouter);
 app.use('/api/positions', positionsRouter);
 app.use('/api/trades',    tradesRouter);
 app.use('/api/settings',  settingsRouter);
-
+app.use('/api/market',   marketRouter);
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
