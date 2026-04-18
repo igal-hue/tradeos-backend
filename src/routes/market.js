@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const POLYGON_API_KEY = process.env.POLYGON_API_KEY;
-const BASE_URL = 'https://api.massive.com';
+const BASE_URL = 'https://api.polygon.io';
 
 // GET /api/market/quote/:ticker
 router.get('/quote/:ticker', async (req, res) => {
